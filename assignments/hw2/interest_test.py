@@ -5,7 +5,7 @@ import pytest
 from hw2 import interest
 from tests import api_service
 from tests import code_style
-Copyright
+
 total = 0
 global_points = 5
 code_style_points = 20
