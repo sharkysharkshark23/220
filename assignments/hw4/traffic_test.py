@@ -10,7 +10,6 @@ import pytest
 from hw4 import traffic
 from tests.code_style import code_style
 from tests.hw3.test_case import TestCase, Road
-
 total = 0
 points_per_test = 5
 sub_points = 1
