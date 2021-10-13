@@ -1,29 +1,62 @@
 """
 Name: Thomas Scola
-Partner: I did this at home becuase I was studying for a midterm
 I certify this is my work and my work only
 lab7.py
 """
-
-def main():
-
+import math
 def cash_conversion():
-    x = input("Input cash amount")
-    print('{}'.format('x'))
-    [Output: x]
-    print('{}'.format(x))
-    print('{:.2}'.format(x))
-
-cash_conversion()
+    cash = eval(input("Input cash amount"))
+    cash_float = "{:.2f}".format(cash)
+    print("$" +cash_float)
 
 def encode():
+    inputSentence = str(input("Please enter a string of plaintext:"))
+    key_value = int(input("Please enter the value of the key:"))
+    codedMessage = ""
 
+    for ch in inputSentence:
+        codedMessage += chr((ord(ch) - 97 + key_value) % 26 + 97)
 
+    print("The text inputed", codedMessage)
 
+def sphere_area(radius):
+    surface_area = 4 * math.pi * radius ** 2
+    return surface_area
 
+def sphere_volume(radius):
+    volume = (4/3) * math.pi * radius ** 3
+    return(volume)
 
-    # add function calls here
-    #pass
+def sum_n(n):
+    accum = 0
+    for num in range(n):
+        accum += 1 ** 3
+    return accum
+
+def sum_n_cube(n):
+    accum = 0
+    for num in range(n):
+        accum += num ** 3
+    return accum
+
+def encode_better():
+    input_sentence = str(input("Please enter a string of plaintext:"))
+    key_value = eval(input("Please enter the key:"))
+    codedMessage = ""
+
+    for ch in input_sentence:
+        codedMessage += chr((ord(ch) - 97 + key_value) % 26 + 97)
+
+    print("The text inputed", codedMessage)
+
+def main():
+    cash_conversion()
+    encode()
+    print(sphere_area(3))
+    print(sphere_volume(3))
+    print(sum_n(3))
+    print(sum_n_cube(3))
+    encode_better()
 
 
 main()
