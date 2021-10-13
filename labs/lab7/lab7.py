@@ -40,14 +40,20 @@ def sum_n_cube(n):
     return accum
 
 def encode_better():
-    input_sentence = str(input("Please enter a string of plaintext:"))
-    key_value = eval(input("Please enter the key:"))
+    input_sentence = input("Please enter a string of plaintext:")
+    key_value = input("Please enter the key:")
     codedMessage = ""
 
-    for ch in input_sentence:
-        codedMessage += chr((ord(ch) - 97 + key_value) % 26 + 97)
+    for ch in range(len(input_sentence)):
+        s = ord(input_sentence[ch])
+        k = ord(key_value[ch % len(key_value)])
+        k = k -97
+        s = s + k
+        new_sentence = chr(s)
+        codedMessage += new_sentence
 
-    print("The text inputed", codedMessage)
+    print(codedMessage)
+
 
 def main():
     cash_conversion()
